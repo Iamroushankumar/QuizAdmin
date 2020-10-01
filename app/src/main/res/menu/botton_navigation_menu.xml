@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addquestionfrag"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add_question" />
+    <item
+        android:id="@+id/viewquestion"
+        android:icon="@drawable/ic_view"
+        android:title="@string/view_question" />
+
+
+</menu>

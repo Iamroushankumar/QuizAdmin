@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Quiz Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_question">Enter Question</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="enter_option1">Enter Option 1</string>
+    <string name="enter_option2">Enter Option 2</string>
+    <string name="enter_option3">Enter Option 3</string>
+    <string name="enter_correct_answer">Enter Correct Answer</string>
+    <string name="save">Save</string>
+    <string name="view">View</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="option1">Option1</string>
+    <string name="option2">Option2</string>
+    <string name="option3">Option3</string>
+</resources>

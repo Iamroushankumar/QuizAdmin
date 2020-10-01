@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+<string name="add_question">Add Questions</string>
+    <string name="view_question">View Questions</string>
+
+    <style name="edittext_style_outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusBottomEnd">@dimen/box_corner</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/box_corner</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/box_corner</item>
+        <item name="boxCornerRadiusTopStart">@dimen/box_corner</item>
+    </style>
+</resources>

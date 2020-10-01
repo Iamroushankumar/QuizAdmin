@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/addquestionfrag">
+
+    <fragment
+        android:id="@+id/addquestionfrag"
+        android:name="com.example.quizadmin.addquestion.AddQuestionFragment"
+        android:label="@string/add_question"
+        tools:layout="@layout/fragment_add_question">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/viewquestion"
+        android:name="com.example.quizadmin.viewquestion.ViewQuestionFragment"
+        android:label="@string/view_question"
+        tools:layout="@layout/fragment_view_question">
+        <action
+            android:id="@+id/addquestion_to_viewquestion"
+            app:destination="@+id/viewquestion" />
+    </fragment>
+
+</navigation>

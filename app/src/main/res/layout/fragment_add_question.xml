@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.quizadmin.addquestion.AddQuestionViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activities.LoginActivity">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_question_addquestionfrag"
+                style="@style/edittext_style_outlined"
+                android:layout_width="@dimen/margin_null"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:hint="@string/enter_question"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tet_question_addquestionfrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tv_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/upload_image"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_question_addquestionfrag" />
+
+            <ImageView
+                android:id="@+id/iv_document_upload"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/dotted"
+                android:foregroundGravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_option1_addquestionfrag"
+                style="@style/edittext_style_outlined"
+                android:layout_width="@dimen/margin_null"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:hint="@string/enter_option1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_document_upload">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tet_option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_option2_addquestionfrag"
+                style="@style/edittext_style_outlined"
+                android:layout_width="@dimen/margin_null"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:hint="@string/enter_option2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_option1_addquestionfrag">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tet_option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_option3_addquestionfrag"
+                style="@style/edittext_style_outlined"
+                android:layout_width="@dimen/margin_null"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:hint="@string/enter_option3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_option2_addquestionfrag">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tet_option3"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_correctans_addquestionfrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:text="@string/enter_correct_answer"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_option3_addquestionfrag" />
+            <RadioGroup
+
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:weightSum="1"
+                android:id="@+id/radioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/tv_correctans_addquestionfrag"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+             >
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option1"
+                    android:id="@+id/radioButton1"
+                    android:checked="false"
+                    android:textSize="25dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option2"
+                    android:id="@+id/radioButton2"
+                    android:checked="false"
+                    android:textSize="25dp"
+                    android:layout_weight="0.13" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option3"
+                    android:id="@+id/radioButton3"
+                    android:checked="false"
+                    android:textSize="25dp"
+                    android:layout_weight="0.13" />
+            </RadioGroup>
+            <Button
+                android:id="@+id/bt_verify_upload"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_bg_black"
+                android:text="@string/save"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
