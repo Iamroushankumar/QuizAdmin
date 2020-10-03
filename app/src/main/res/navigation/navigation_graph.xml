@@ -10,7 +10,9 @@
         android:name="com.example.quizadmin.addquestion.AddQuestionFragment"
         android:label="@string/add_question"
         tools:layout="@layout/fragment_add_question">
-
+        <action
+            android:id="@+id/addquestion_to_viewquestion"
+            app:destination="@+id/viewquestion" />
     </fragment>
 
 
@@ -19,9 +21,7 @@
         android:name="com.example.quizadmin.viewquestion.ViewQuestionFragment"
         android:label="@string/view_question"
         tools:layout="@layout/fragment_view_question">
-        <action
-            android:id="@+id/addquestion_to_viewquestion"
-            app:destination="@+id/viewquestion" />
+
     </fragment>
 
 </navigation>

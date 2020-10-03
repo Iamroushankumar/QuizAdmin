@@ -5,5 +5,7 @@ import io.reactivex.rxjava3.core.Single
 
 interface QuestionUseCase {
     fun createLocal(employee: Quiz): Single<String>
-
+    fun getQuestion(): Single<List<Quiz>>
+    fun deleteQuestion(id: Long):Single<Boolean>
+    fun editQuestion(id: Long):Single<String>
 }

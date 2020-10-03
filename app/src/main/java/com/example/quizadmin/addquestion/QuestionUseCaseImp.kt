@@ -10,11 +10,34 @@ import javax.inject.Inject
 class QuestionUseCaseImp @Inject constructor(
     private val database: Box<Quiz>,
 
-    ):QuestionUseCase {
+    ) : QuestionUseCase {
 
 
     override fun createLocal(question: Quiz): Single<String> =
-        Single.create<String> { val id=database.put(question)
-        it.onSuccess(id.toString())}
+        Single.create<String> {
+            val id = database.put(question)
+            it.onSuccess(id.toString())
+        }
+
+    override fun getQuestion(): Single<List<Quiz>> =
+        Single.create<List<Quiz>> {
+            it.onSuccess(database.all)
+        }
+
+    override fun deleteQuestion(id: Long): Single<Boolean> =
+        Single.create<Boolean> {
+            if (database.contains(id)) {
+                it.onSuccess(
+                    database.remove(id)
+                )
+            }
+
+        }
+
+
+    override fun editQuestion(id: Long): Single<String> {
+        TODO("Not yet implemented")
+    }
+
 
 }

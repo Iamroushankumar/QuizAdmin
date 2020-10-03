@@ -162,7 +162,9 @@
                     android:text="@string/option1"
                     android:id="@+id/radioButton1"
                     android:checked="false"
-                    android:textSize="25dp" />
+                    android:textSize="@dimen/text_large"
+
+                    />
 
                 <RadioButton
                     android:layout_width="match_parent"
@@ -170,7 +172,7 @@
                     android:text="@string/option2"
                     android:id="@+id/radioButton2"
                     android:checked="false"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/text_large"
                     android:layout_weight="0.13" />
                 <RadioButton
                     android:layout_width="match_parent"
@@ -178,7 +180,7 @@
                     android:text="@string/option3"
                     android:id="@+id/radioButton3"
                     android:checked="false"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/text_large"
                     android:layout_weight="0.13" />
             </RadioGroup>
             <Button

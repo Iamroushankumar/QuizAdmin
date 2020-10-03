@@ -8,8 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import com.example.quizadmin.Quiz
 import com.example.quizadmin.R
 import dagger.hilt.android.AndroidEntryPoint
@@ -44,14 +46,31 @@ class AddQuestionFragment : Fragment() {
                 requireContext(),
                 "Question Added Successfully with ID :: $it",
                 Toast.LENGTH_SHORT
+
             ).show()
             Log.d(TAG, "QuestionAd<><> :: $it")
+            showSuccessAlert()
         })
 
         bt_verify_upload.setOnClickListener {
 
             addQuestion()
         }
+    }
+
+    private fun showSuccessAlert() {
+        val builder = AlertDialog.Builder(requireActivity())
+        builder.setTitle("Success")
+        builder.setMessage("Question Added Successfully")
+        builder.setIcon(android.R.drawable.ic_dialog_alert)
+        builder.setPositiveButton("Ok") { dialogInterface, which ->
+            Navigation.findNavController(requireActivity(), R.id.frameContainer)
+                .navigate(R.id.addquestion_to_viewquestion)
+        }
+        val alertDialog: AlertDialog = builder.create()
+        alertDialog.setCancelable(false)
+        alertDialog.show()
+
     }
 
     private fun addQuestion() {
