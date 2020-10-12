@@ -7,5 +7,7 @@ interface QuestionUseCase {
     fun createLocal(employee: Quiz): Single<String>
     fun getQuestion(): Single<List<Quiz>>
     fun deleteQuestion(id: Long):Single<Boolean>
-    fun editQuestion(id: Long):Single<String>
+    fun editQuestion(quiz:Quiz,id: Long):Single<String>
+
+    fun getData(id: Long):Single<Quiz>
 }

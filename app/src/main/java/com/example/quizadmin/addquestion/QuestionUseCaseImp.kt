@@ -35,9 +35,25 @@ class QuestionUseCaseImp @Inject constructor(
         }
 
 
-    override fun editQuestion(id: Long): Single<String> {
-        TODO("Not yet implemented")
-    }
+    override fun editQuestion(quiz: Quiz, id: Long): Single<String> =
+
+        Single.create<String> {
+            if (database.contains(id)) {
+                val id = database.put(quiz)
+                it.onSuccess(id.toString())
+            }
+
+        }
+
+    override fun getData(id: Long): Single<Quiz> =
+        Single.create<Quiz> {
+            if (database.contains(id)) {
+              val quiz=  database.get(id)
+                it.onSuccess(quiz)
+            }
+
+        }
+
 
 
 }

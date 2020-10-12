@@ -14,13 +14,26 @@
             android:id="@+id/addquestion_to_viewquestion"
             app:destination="@+id/viewquestion" />
     </fragment>
+    <fragment
+        android:id="@+id/editQuestionFrag"
+        android:name="com.example.quizadmin.editQuestion.EditQuestionFragment"
+        android:label="@string/edit_question"
+        tools:layout="@layout/fragment_edit_question">
 
+    </fragment>
 
     <fragment
         android:id="@+id/viewquestion"
         android:name="com.example.quizadmin.viewquestion.ViewQuestionFragment"
         android:label="@string/view_question"
         tools:layout="@layout/fragment_view_question">
+        <action
+            android:id="@+id/viewquestion_to_editquestion"
+            app:destination="@id/editQuestionFrag" />
+
+        <argument
+            android:name="editData"
+            app:argType="java.lang.Long" />
 
     </fragment>
 

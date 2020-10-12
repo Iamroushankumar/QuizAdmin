@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:8645325591987843505",
-      "lastPropertyId": "6:6013211040408177442",
+      "lastPropertyId": "8:3141471440415894248",
       "name": "Quiz",
       "properties": [
         {
@@ -39,6 +39,11 @@
           "name": "correctans",
           "type": 5,
           "flags": 4
+        },
+        {
+          "id": "8:3141471440415894248",
+          "name": "image",
+          "type": 23
         }
       ],
       "relations": []
@@ -52,7 +57,9 @@
   "modelVersionParserMinimum": 5,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    3189434688653424051
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

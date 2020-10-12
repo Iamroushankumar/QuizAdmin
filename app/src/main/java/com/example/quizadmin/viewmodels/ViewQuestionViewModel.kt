@@ -1,4 +1,4 @@
-package com.example.quizadmin.viewquestion
+package com.example.quizadmin.viewmodels
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject

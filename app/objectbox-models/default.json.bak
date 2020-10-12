@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:8645325591987843505",
-      "lastPropertyId": "5:2641689915336909814",
+      "lastPropertyId": "7:3189434688653424051",
       "name": "Quiz",
       "properties": [
         {
@@ -33,6 +33,17 @@
           "id": "5:2641689915336909814",
           "name": "option3",
           "type": 9
+        },
+        {
+          "id": "6:6013211040408177442",
+          "name": "correctans",
+          "type": 5,
+          "flags": 4
+        },
+        {
+          "id": "7:3189434688653424051",
+          "name": "file",
+          "type": 23
         }
       ],
       "relations": []

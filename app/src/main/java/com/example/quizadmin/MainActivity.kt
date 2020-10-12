@@ -1,17 +1,17 @@
 package com.example.quizadmin
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.example.quizadmin.addquestion.AddQuestionFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.theartofdev.edmodo.cropper.CropImage
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
@@ -54,8 +54,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container, fragment, fragment.javaClass.simpleName).commit()
-    }
+
+/*
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            val fragment = supportFragmentManager.findFragmentById(R.id.addquestionfrag)
+            fragment?.onActivityResult(requestCode, resultCode, data)
+        }
+    }*/
 }

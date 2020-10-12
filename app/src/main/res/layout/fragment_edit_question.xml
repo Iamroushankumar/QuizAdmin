@@ -4,13 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
 
-        <variable
-            name="viewmodel"
-            type="com.example.quizadmin.viewmodels.AddQuestionViewModel" />
-
-    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,7 +18,7 @@
             tools:context=".activities.LoginActivity">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_question_addquestionfrag"
+                android:id="@+id/til_question_editquestionfrag"
                 style="@style/edittext_style_outlined"
                 android:layout_width="@dimen/margin_null"
                 android:layout_height="wrap_content"
@@ -37,7 +31,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tet_question_addquestionfrag"
+                    android:id="@+id/tet_question_editquestionfrag"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:inputType="textEmailAddress" />
@@ -55,7 +49,7 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_question_addquestionfrag" />
+                app:layout_constraintTop_toBottomOf="@+id/til_question_editquestionfrag" />
 
             <ImageView
                 android:id="@+id/iv_upload"
@@ -71,7 +65,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_text2" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_option1_addquestionfrag"
+                android:id="@+id/til_option1_editquestionfrag"
                 style="@style/edittext_style_outlined"
                 android:layout_width="@dimen/margin_null"
                 android:layout_height="wrap_content"
@@ -87,11 +81,12 @@
                     android:id="@+id/tet_option1"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_option2_addquestionfrag"
+                android:id="@+id/til_option2_editquestionfrag"
                 style="@style/edittext_style_outlined"
                 android:layout_width="@dimen/margin_null"
                 android:layout_height="wrap_content"
@@ -101,17 +96,18 @@
                 android:hint="@string/enter_option2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_option1_addquestionfrag">
+                app:layout_constraintTop_toBottomOf="@+id/til_option1_editquestionfrag">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tet_option2"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_option3_addquestionfrag"
+                android:id="@+id/til_option3_editquestionfrag"
                 style="@style/edittext_style_outlined"
                 android:layout_width="@dimen/margin_null"
                 android:layout_height="wrap_content"
@@ -121,17 +117,18 @@
                 android:hint="@string/enter_option3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_option2_addquestionfrag">
+                app:layout_constraintTop_toBottomOf="@+id/til_option2_editquestionfrag">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tet_option3"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/tv_correctans_addquestionfrag"
+                android:id="@+id/tv_correctans_editquestionfrag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
@@ -141,7 +138,7 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_option3_addquestionfrag" />
+                app:layout_constraintTop_toBottomOf="@+id/til_option3_editquestionfrag" />
             <RadioGroup
 
                 android:layout_width="fill_parent"
@@ -149,12 +146,12 @@
                 android:layout_marginTop="@dimen/margin_normal"
                 android:weightSum="1"
                 android:id="@+id/radioGroup"
-                app:layout_constraintTop_toBottomOf="@+id/tv_correctans_addquestionfrag"
+                app:layout_constraintTop_toBottomOf="@+id/tv_correctans_editquestionfrag"
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginEnd="@dimen/margin_normal"
-             >
+                >
 
                 <RadioButton
                     android:layout_width="match_parent"
@@ -184,7 +181,7 @@
                     android:layout_weight="0.13" />
             </RadioGroup>
             <Button
-                android:id="@+id/bt_verify_upload"
+                android:id="@+id/bt_edit"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginStart="20dp"

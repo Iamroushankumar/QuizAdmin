@@ -8,7 +8,7 @@
     </style>
 <string name="add_question">Add Questions</string>
     <string name="view_question">View Questions</string>
-
+<string name="edit_question">Edit Question</string>
     <style name="edittext_style_outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxCornerRadiusBottomEnd">@dimen/box_corner</item>
         <item name="boxCornerRadiusBottomStart">@dimen/box_corner</item>

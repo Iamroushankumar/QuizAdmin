@@ -6,12 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelStore
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.quizadmin.Quiz
 import com.example.quizadmin.R
+import com.example.quizadmin.viewmodels.AddQuestionViewModel
+import com.example.quizadmin.viewmodels.ViewQuestionViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_view_question.*
 
@@ -33,6 +36,8 @@ class ViewQuestionFragment : Fragment(), OnQuestionListner {
     }
 
     private val viewModel: ViewQuestionViewModel by viewModels()
+    private val addquestionviewmodel: AddQuestionViewModel by viewModels()
+
     private var list = mutableListOf<Quiz>()
 
     private val adapter: ViewQuestionAdapter by lazy {
@@ -75,8 +80,12 @@ class ViewQuestionFragment : Fragment(), OnQuestionListner {
         viewModel.deleteLocal(id)
     }
 
-    override fun onQuestionEdit(id: Long) {
+    override fun onQuestionEdit(quiz: Quiz) {
+        val bundle= bundleOf("editData" to quiz.id)
+        Navigation.findNavController(requireActivity(), R.id.frameContainer)
+            .navigate(R.id.viewquestion_to_editquestion,bundle)
     }
+
 
     override fun onQuestionSelect(id: Long) {
     }
